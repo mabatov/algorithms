@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-    public static int[] selectionSort(int[] arr) {
+    public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
             for (int j = i+1; j < arr.length; j++) {
                 if (arr[j] < arr[i]) {
@@ -14,13 +14,11 @@ public class SelectionSort {
                 }
             }
         }
-        return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{5, 3, 6, 2, 10};
-        int[] sortedArr = selectionSort(arr);
-
-        System.out.println("Result: " + Arrays.toString(sortedArr));
+        int[] arr = {5, 3, 6, 2, 10};
+        selectionSort(arr);
+        System.out.println(Arrays.toString(arr)); // [2, 3, 5, 6, 10]
     }
 }
